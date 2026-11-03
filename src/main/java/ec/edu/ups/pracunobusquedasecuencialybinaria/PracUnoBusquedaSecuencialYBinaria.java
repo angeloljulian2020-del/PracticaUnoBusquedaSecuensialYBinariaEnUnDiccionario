@@ -9,7 +9,7 @@ import java.util.Random;
 
 public class PracUnoBusquedaSecuencialYBinaria {
 
-    // Contadores independientes para cada método (como se vio en clases)
+    // Contadores independientes para cada método 
     public static int contadorSecuencial = 0;
     public static int contadorBinaria = 0;
 
