@@ -78,7 +78,7 @@ public class PracUnoBusquedaSecuencialYBinaria {
         }
     }
 
-    // --- MÉTODOS DE BÚSQUEDA ---
+    // MÉTODOS DE BÚSQUEDA 
     public static int busquedaSecuencial(String[] arreglo, String objetivo) {
         for (int i = 0; i < arreglo.length; i++) {
             contadorSecuencial++;
@@ -157,6 +157,6 @@ public class PracUnoBusquedaSecuencialYBinaria {
         Arrays.sort(tiemposSec);
         Arrays.sort(tiemposBin);
 
-        System.out.println("Para n = " + n + " -> Mediana Secuencial: " + tiemposSec[2] + " ms | Mediana Binaria: " + tiemposBin[2] + " ms");
+        System.out.println("Para n = " + n + "    Tiempo Secuencial: " + tiemposSec[2] + " ms | Tiempo Binaria " + tiemposBin[2] + " ms");
     }
 }
