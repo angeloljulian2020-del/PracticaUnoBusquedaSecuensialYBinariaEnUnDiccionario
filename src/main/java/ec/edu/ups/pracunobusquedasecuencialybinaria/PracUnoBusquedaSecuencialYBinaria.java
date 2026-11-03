@@ -62,7 +62,7 @@ public class PracUnoBusquedaSecuencialYBinaria {
                 System.out.println("Significado encontrado: " + diccionario[idxLib].getSignificado());
             } else {
                 int puntoInsercion = -idxLib - 1;
-                System.out.println("Termino ausente. Punto de insercion: " + puntoInsercion);
+                System.out.println("Termino no encontrado. Punto de insercion: " + puntoInsercion);
             }
         }
 
@@ -137,19 +137,19 @@ public class PracUnoBusquedaSecuencialYBinaria {
         for (int ronda = 0; ronda < 5; ronda++) {
 
             // Medición Secuencial 
-            double inicioSec = System.currentTimeMillis();
+            double inicioSec = System.nanoTime();
             for (int k = 0; k < 10000; k++) {
                 busquedaSecuencial(dataset, consulta);
             }
-            double finSec = System.currentTimeMillis();
+            double finSec = System.nanoTime();
             tiemposSec[ronda] = (finSec - inicioSec) / 10000.0;
 
             // --- Medición Binaria Propia ---
-            double inicioBin = System.currentTimeMillis();
+            double inicioBin = System.nanoTime();
             for (int k = 0; k < 10000; k++) {
                 busquedaBinariaPropia(dataset, consulta);
             }
-            double finBin = System.currentTimeMillis();
+            double finBin = System.nanoTime();
             tiemposBin[ronda] = (finBin - inicioBin) / 10000.0;
         }
 
@@ -157,6 +157,6 @@ public class PracUnoBusquedaSecuencialYBinaria {
         Arrays.sort(tiemposSec);
         Arrays.sort(tiemposBin);
 
-        System.out.println("Para n = " + n + "    Tiempo Secuencial: " + tiemposSec[2] + " ms | Tiempo Binaria " + tiemposBin[2] + " ms");
+        System.out.println("Para n = " + n + "    Tiempo Secuencial: " + tiemposSec[2] + " ns | Tiempo Binaria " + tiemposBin[2] + " ns");
     }
 }
